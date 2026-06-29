@@ -1,0 +1,757 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgb(250, 127, 70) 0%, rgb(237, 93, 9) 55%, rgb(200, 75, 4) 100%);
+    font-family: 'Outfit', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Swoosh Watermark */
+.bg-swoosh-watermark {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(-16deg) scale(1.15);
+    width: 80%;
+    max-width: 900px;
+    color: rgb(0, 0, 0);
+    /* Darker orange/red for watermark */
+    opacity: 0.12;
+    /* Subtle visibility */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bg-swoosh-watermark svg {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+
+/* Nike Logo Custom Styles */
+.nike-logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nike-wordmark {
+    font-family: 'Outfit', 'Impact', 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.85rem;
+    letter-spacing: -2px;
+    line-height: 0.75;
+    color: #ffffff;
+    transform: skewX(-15deg) scaleY(0.85);
+}
+
+.nike-swoosh-icon {
+    width: 48px;
+    height: auto;
+    fill: #ffffff;
+    margin-top: -3px;
+    transform: rotate(-3deg);
+}
+
+/* Glassmorphic Nav Bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    padding: 4px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 8px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 100px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* User Profile Icon Button */
+.user-profile-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.profile-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-btn:hover {
+    background: #ffffff;
+    color: rgb(237, 93, 9);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Hero Grid Layout */
+.hero-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 1.6fr 1.1fr;
+    align-items: stretch;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+
+}
+
+/* Grid Sections */
+.grid-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.grid-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.grid-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Typography Styles */
+.hero-headline {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+}
+
+.description-block {
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+}
+
+.price-new {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.price-old {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: line-through;
+}
+
+.description-text {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    max-width: 320px;
+    font-weight: 400;
+}
+
+/* Center Image Container */
+.jacket-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.jacket-image {
+    width: 125%;
+    max-width: none;
+    max-height: 88vh;
+    object-fit: contain;
+    filter: drop-shadow(40px 42px 20px rgba(0, 0, 0, 0.5));
+    animation: float 6s ease-in-out infinite;
+    transition: transform .5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    scale: 1.5;
+}
+
+.jacket-image:hover {
+    transform: scale(1.03) rotate(2deg);
+}
+
+/* Floating animation for jacket */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Center Bottom Slider Controls and Price */
+.slider-and-price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-arrow {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.25s ease;
+}
+
+.slider-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+.slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.08);
+}
+
+.slider-arrow:active {
+    transform: scale(0.9);
+}
+
+.slider-indicator-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.indicator-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+    background: #ffffff;
+    width: 20px;
+    border-radius: 4px;
+}
+
+.large-price-display {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+    margin-top: 2px;
+}
+
+/* Right Section - Sizes Row */
+.sizes-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    z-index: 999;
+}
+
+.size-circle {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+.size-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.size-circle:hover {
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.size-circle.active {
+    background: #00000054;
+    color: #111111;
+    border-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Section - Cart & Quantity Block */
+.cart-controls-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 5px;
+}
+
+.quantity-controller {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 6px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(124, 124, 124, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.qty-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.qty-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    width: 32px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background: #ffffff;
+    color: #111111;
+    border: none;
+    border-radius: 100px;
+    padding: 16px 44px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.add-to-cart-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* Large Laptops */
+/* ============================= */
+
+@media (max-width:1400px) {
+
+    body {
+        padding: 30px 40px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .hero-headline {
+        font-size: 3rem;
+    }
+
+    .jacket-image {
+        width: 120%;
+        max-height: 75vh;
+    }
+
+}
+
+
+/* ============================= */
+/* Tablets */
+/* ============================= */
+
+@media (max-width:1024px) {
+
+    body {
+        padding: 25px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .grid-left,
+    .grid-right {
+        align-items: center;
+    }
+
+    .description-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-row {
+        justify-content: center;
+    }
+
+    .description-text {
+        max-width: 600px;
+    }
+
+    .grid-center {
+        order: -1;
+    }
+
+    .jacket-image {
+        width: 80%;
+        max-height: 55vh;
+    }
+
+    .sizes-row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cart-controls-block {
+        align-items: center;
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width:768px) {
+    .nike-logo-group {
+        display: none;
+    }
+
+    .user-profile-wrapper {
+        display: none;
+    }
+
+    .bg-swoosh-watermark {
+        top: 30%;
+        left: 60%;
+        overflow: hidden;
+    }
+
+    body {
+        padding: 18px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-bar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    .nav-link {
+        padding: 10px 18px;
+    }
+
+    .hero-headline {
+        font-size: 2.3rem;
+    }
+
+    .product-name {
+        font-size: 2rem;
+    }
+
+    .description-text {
+        font-size: .95rem;
+        max-width: 100%;
+    }
+
+    .large-price-display {
+        font-size: 2.2rem;
+    }
+
+
+    .jacket-image {
+        width: 100%;
+        max-width: 100%;
+        max-height: 42vh;
+
+    }
+
+    .sizes-row {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .size-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .quantity-controller {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-to-cart-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Mobile Layout Reordering */
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        gap: 30px;
+    }
+
+    .grid-center {
+        order: 1;
+    }
+
+    .grid-right {
+        order: 2;
+    }
+
+    .grid-left {
+        order: 3;
+    }
+
+    .sizes-row {
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .cart-controls-block {
+        margin-top: 25px;
+    }
+
+    .hero-grid,
+    .grid-left,
+    .grid-center,
+    .grid-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+/* ============================= */
+/* Small Phones */
+/* ============================= */
+
+@media (max-width:480px) {
+    .nike-logo-group {
+        display: none;
+    }
+
+    .user-profile-wrapper {
+        display: none;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .product-name {
+        font-size: 1.6rem;
+    }
+
+    .large-price-display {
+        font-size: 1.8rem;
+    }
+
+    .nav-bar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    .nav-link {
+        padding: 8px 12px;
+        font-size: .85rem;
+    }
+
+    .jacket-image {
+        width: 100%;
+        max-width: 100%;
+        max-height: 34vh;
+    }
+
+    .size-circle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .qty-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .add-to-cart-btn {
+        padding: 14px 20px;
+        width: 100%;
+    }
+
+    .hero-grid,
+    .grid-left,
+    .grid-center,
+    .grid-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
