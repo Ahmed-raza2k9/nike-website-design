@@ -5,9 +5,11 @@
     box-sizing: border-box;
 
 }
-html{
+
+html {
     overflow-x: hidden;
 }
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -19,6 +21,35 @@ body {
     padding: 40px 60px;
     overflow-x: hidden;
     position: relative;
+}
+
+.main-website-content {
+    display: none;
+    animation: fade 2s linear 0s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+
 }
 
 /* Background Swoosh Watermark */
@@ -754,4 +785,200 @@ body {
         max-width: 100%;
         min-width: 0;
     }
+}
+
+/* Container Viewport */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.skeleton-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    animation: fade2 4s linear 0s 1 forwards;
+}
+
+/* Smooth Pulse Animation for Shimmer Effect */
+@keyframes skeleton-pulse {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .7;
+    }
+}
+
+.skeleton-element {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    animation: skeleton-pulse .4s infinite ease-in-out alternate-reverse;
+}
+
+/* Header / Navbar Layout */
+.skeleton-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.skeleton-logo {
+    width: 90px;
+    height: 35px;
+    border-radius: 6px;
+}
+
+.skeleton-nav-links {
+    width: 320px;
+    height: 42px;
+    border-radius: 21px;
+}
+
+.skeleton-profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+/* Main Section Content Area */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 140px);
+    width: 100%;
+}
+
+/* Left Side: Brand Text & Descriptions */
+.skeleton-left {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-title-1 {
+    width: 90%;
+    height: 38px;
+}
+
+.skeleton-title-2 {
+    width: 75%;
+    height: 38px;
+    margin-bottom: 30px;
+}
+
+.skeleton-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton-subtitle-1 {
+    width: 55%;
+    height: 28px;
+}
+
+.skeleton-subtitle-2 {
+    width: 45%;
+    height: 28px;
+    margin-bottom: 8px;
+}
+
+.skeleton-price-tag {
+    width: 35%;
+    height: 16px;
+    margin-bottom: 15px;
+}
+
+.skeleton-para-1 {
+    width: 100%;
+    height: 12px;
+}
+
+.skeleton-para-2 {
+    width: 95%;
+    height: 12px;
+}
+
+.skeleton-para-3 {
+    width: 80%;
+    height: 12px;
+}
+
+/* Center Side: Hero Image & Big Price Display */
+.skeleton-center {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.skeleton-hero-image {
+    width: 85%;
+    height: 290px;
+    border-radius: 35px;
+}
+
+.skeleton-big-price {
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+/* Right Side: Thumbnails & Action Controls */
+.skeleton-right {
+    width: 28%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.skeleton-thumbnails {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.skeleton-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.skeleton-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.skeleton-quantity {
+    width: 85px;
+    height: 38px;
+    border-radius: 19px;
+}
+
+.skeleton-btn {
+    width: 160px;
+    height: 48px;
+    border-radius: 24px;
 }

@@ -15,103 +15,148 @@
 </head>
 
 <body>
-    <!-- Background Swoosh Watermark -->
-    <div class="bg-swoosh-watermark watermark-bg">
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.12 0-1.933-.392-2.437-1.177-.317-.504-.41-1.143-.28-1.918.13-.775.476-1.6 1.036-2.478.467-.71 1.232-1.643 2.297-2.8a6.122 6.122 0 00-.784 1.848c-.28 1.195-.028 2.072.756 2.632.373.261.886.392 1.54.392.522 0 1.11-.102 1.764-.308L24 7.8z" />
-        </svg>
-    </div>
+    <!-- skeleton  -->
+    <div class="skeleton-container">
+        <header class="skeleton-navbar">
+            <div class="skeleton-element skeleton-logo"></div>
+            <div class="skeleton-element skeleton-nav-links"></div>
+            <div class="skeleton-element skeleton-profile"></div>
+        </header>
 
-    <!-- Header -->
-    <header class="header">
-        <!-- Nike Logo (Swoosh + Text) -->
-        <div class="nike-logo-group">
-            <span class="nike-wordmark">NIKE</span>
-            <svg class="nike-swoosh-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <main class="main-content">
+            <section class="skeleton-left">
+                <div class="skeleton-element skeleton-title-1"></div>
+                <div class="skeleton-element skeleton-title-2"></div>
+
+                <div class="skeleton-product-info">
+                    <div class="skeleton-element skeleton-subtitle-1"></div>
+                    <div class="skeleton-element skeleton-subtitle-2"></div>
+                    <div class="skeleton-element skeleton-price-tag"></div>
+                    <div class="skeleton-element skeleton-para-1"></div>
+                    <div class="skeleton-element skeleton-para-2"></div>
+                    <div class="skeleton-element skeleton-para-3"></div>
+                </div>
+            </section>
+
+            <section class="skeleton-center">
+                <div class="skeleton-element skeleton-hero-image"></div>
+                <div class="skeleton-element skeleton-big-price"></div>
+            </section>
+
+            <section class="skeleton-right">
+                <div class="skeleton-thumbnails">
+                    <div class="skeleton-element skeleton-circle"></div>
+                    <div class="skeleton-element skeleton-circle"></div>
+                    <div class="skeleton-element skeleton-circle"></div>
+                </div>
+
+                <div class="skeleton-actions">
+                    <div class="skeleton-element skeleton-quantity"></div>
+                    <div class="skeleton-element skeleton-btn"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="main-website-content">
+        <!-- Background Swoosh Watermark -->
+        <div class="bg-swoosh-watermark watermark-bg">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.12 0-1.933-.392-2.437-1.177-.317-.504-.41-1.143-.28-1.918.13-.775.476-1.6 1.036-2.478.467-.71 1.232-1.643 2.297-2.8a6.122 6.122 0 00-.784 1.848c-.28 1.195-.028 2.072.756 2.632.373.261.886.392 1.54.392.522 0 1.11-.102 1.764-.308L24 7.8z" />
             </svg>
         </div>
 
-        <!-- Navigation Bar -->
-        <nav class="nav-bar">
-            <a href="#" class="nav-link active">Menu</a>
-            <a href="#" class="nav-link text-all">About</a>
-            <a href="#" class="nav-link text-all">Shop</a>
-            <a href="#" class="nav-link text-all">Contact</a>
-        </nav>
-
-        <!-- User Profile Button -->
-        <div class="user-profile-wrapper">
-            <button class="profile-btn" aria-label="User Profile">
-                <i class="fa-regular fa-user text-all"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Main Hero Grid Layout -->
-    <main class="hero-grid">
-        <!-- Left Section -->
-        <section class="grid-left">
-            <h2 class="hero-headline text-all">Wear your Style<br>with Confort</h2>
-
-            <div class="description-block">
-                <h3 class="product-name text-all">Comfy<br>Snug</h3>
-                <div class="price-row">
-                    <span class="label text-all">Quality Favour</span>
-                    <span class="price-new text-all">$99.50</span>
-                    <span class="price-old text-all">$149.50</span>
-                </div>
-                <p class="description-text text-all">
-                    Experience the warmth and softness in every wear! Our cozy sweaters are made with care,
-                    designed for everyday comfort, and crafted to keep you stylish and relaxed.
-                </p>
-            </div>
-        </section>
-
-        <!-- Center Section -->
-        <section class="grid-center">
-            <!-- Float/Interactive Jacket Container -->
-            <div class="jacket-container">
-                <img class="jacket-image" id="hero-img" src="./media/jacket orange.jpg" alt="Nike Orange Puffer Jacket">
+        <!-- Header -->
+        <header class="header">
+            <!-- Nike Logo (Swoosh + Text) -->
+            <div class="nike-logo-group">
+                <span class="nike-wordmark">NIKE</span>
+                <svg class="nike-swoosh-icon" viewBox="0 0 24 24" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.12 0-1.933-.392-2.437-1.177-.317-.504-.41-1.143-.28-1.918.13-.775.476-1.6 1.036-2.478.467-.71 1.232-1.643 2.297-2.8a6.122 6.122 0 00-.784 1.848c-.28 1.195-.028 2.072.756 2.632.373.261.886.392 1.54.392.522 0 1.11-.102 1.764-.308L24 7.8z" />
+                </svg>
             </div>
 
-            <!-- Bottom Controls: Slider and Price -->
-            <div class="slider-and-price-section">
-                <div class="large-price-display text-all">
-                    $99.50
-                </div>
-            </div>
-        </section>
+            <!-- Navigation Bar -->
+            <nav class="nav-bar">
+                <a href="#" class="nav-link active">Menu</a>
+                <a href="#" class="nav-link text-all">About</a>
+                <a href="#" class="nav-link text-all">Shop</a>
+                <a href="#" class="nav-link text-all">Contact</a>
+            </nav>
 
-        <!-- Right Section -->
-        <section class="grid-right">
-            <!-- Size circles -->
-            <div class="sizes-row">
-                <button class="size-circle active"><img src="./media/jacket orange.jpg" alt=""></button>
-                <button class="size-circle"><img src="./media/jacket white.png" alt=""></button>
-                <button class="size-circle"><img src="./media/jacket black.png" alt=""></button>
-            </div>
-
-            <!-- Cart and Qty at Bottom -->
-            <div class="cart-controls-block">
-                <div class="quantity-controller qt">
-                    <button class="qty-btn text-all" aria-label="Decrease quantity">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <span class="qty-value text-all">3</span>
-                    <button class="qty-btn text-all" aria-label="Increase quantity">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </div>
-                <button class="add-to-cart-btn">
-                    Add to cart
+            <!-- User Profile Button -->
+            <div class="user-profile-wrapper">
+                <button class="profile-btn" aria-label="User Profile">
+                    <i class="fa-regular fa-user text-all"></i>
                 </button>
             </div>
-        </section>
-    </main>
+        </header>
 
+        <!-- Main Hero Grid Layout -->
+        <main class="hero-grid">
+            <!-- Left Section -->
+            <section class="grid-left">
+                <h2 class="hero-headline text-all">Wear your Style<br>with Confort</h2>
+
+                <div class="description-block">
+                    <h3 class="product-name text-all">Comfy<br>Snug</h3>
+                    <div class="price-row">
+                        <span class="label text-all">Quality Favour</span>
+                        <span class="price-new text-all">$99.50</span>
+                        <span class="price-old text-all">$149.50</span>
+                    </div>
+                    <p class="description-text text-all">
+                        Experience the warmth and softness in every wear! Our cozy sweaters are made with care,
+                        designed for everyday comfort, and crafted to keep you stylish and relaxed.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Center Section -->
+            <section class="grid-center">
+                <!-- Float/Interactive Jacket Container -->
+                <div class="jacket-container">
+                    <img class="jacket-image" id="hero-img" src="./media/jacket orange.jpg"
+                        alt="Nike Orange Puffer Jacket">
+                </div>
+
+                <!-- Bottom Controls: Slider and Price -->
+                <div class="slider-and-price-section">
+                    <div class="large-price-display text-all">
+                        $99.50
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section -->
+            <section class="grid-right">
+                <!-- Size circles -->
+                <div class="sizes-row">
+                    <button class="size-circle active"><img src="./media/jacket orange.jpg" alt=""></button>
+                    <button class="size-circle"><img src="./media/jacket white.png" alt=""></button>
+                    <button class="size-circle"><img src="./media/jacket black.png" alt=""></button>
+                </div>
+
+                <!-- Cart and Qty at Bottom -->
+                <div class="cart-controls-block">
+                    <div class="quantity-controller qt">
+                        <button class="qty-btn text-all" aria-label="Decrease quantity">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <span class="qty-value text-all">3</span>
+                        <button class="qty-btn text-all" aria-label="Increase quantity">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        Add to cart
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="app.js"></script>
 </body>
 

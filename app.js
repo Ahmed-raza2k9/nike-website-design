@@ -1,3 +1,13 @@
+let main = document.querySelector('.main-website-content');
+let skeleton = document.querySelector('.skeleton-container');
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        skeleton.style.display = 'none';
+        main.style.display = 'block';
+    }, 2000);
+})
+
 let jacketBtns = document.querySelectorAll('.size-circle');
 let heroImg = document.getElementById('hero-img');
 let orangeBg = 'radial-gradient(circle at 50% 50%, rgb(250, 127, 70) 0%, rgb(237, 93, 9) 55%, rgb(200, 75, 4) 100%)';
