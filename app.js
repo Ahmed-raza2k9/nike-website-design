@@ -2,17 +2,16 @@ let main = document.querySelector('.main-website-content');
 let skeleton = document.querySelector('.skeleton-container');
 
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        skeleton.style.display = 'none';
-        main.style.display = 'block';
-    }, 2000);
+    skeleton.style.display = 'none';
+    main.style.display = 'block';
+
 })
 
 let jacketBtns = document.querySelectorAll('.size-circle');
 let heroImg = document.getElementById('hero-img');
 let orangeBg = 'radial-gradient(circle at 50% 50%, rgb(250, 127, 70) 0%, rgb(237, 93, 9) 55%, rgb(200, 75, 4) 100%)';
 let blackBg = 'radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 0%, rgb(26, 25, 25) 55%, rgb(0, 0, 0) 100%)';
-let whiteBg = 'radial-gradient(circle at 50% 50%, rgb(255, 255, 255) 0%, rgb(214, 212, 212) 55%, rgb(255, 255, 255) 100%)';
+let whiteBg = 'radial-gradient(circle at 50% 50%, rgb(216, 215, 215) 0%, rgb(214, 212, 212) 55%, rgb(255, 255, 255) 100%)';
 let nikeWordmark = document.querySelector('.nike-wordmark');
 let qt = document.querySelector('.qt');
 let nikeIcon = document.querySelector('.nike-swoosh-icon');
