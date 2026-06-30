@@ -2,8 +2,8 @@ let main = document.querySelector('.main-website-content');
 let skeleton = document.querySelector('.skeleton-container');
 
 window.addEventListener('load', () => {
-    skeleton.style.display = 'none';
     main.style.display = 'block';
+    skeleton.style.display = 'none';
 
 })
 
